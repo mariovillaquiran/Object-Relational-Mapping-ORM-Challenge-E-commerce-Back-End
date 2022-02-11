@@ -15,6 +15,8 @@ router.get('/', (req, res) => {
       }
     ]
   })
+  .then((products) => res.json(products))
+  .catch((err) => res.status(500).json(err));
   // be sure to include its associated Category and Tag data
 });
 
@@ -34,16 +36,13 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
+  .then((products) => res.json(products))
+  .catch((err) => res.status(500).json(err));
   // be sure to include its associated Category and Tag data
 });
 
 // create new product
 router.post('/', (req, res) => {
-  Product.create({
-    .then((product) => res.json(product))
-    .catch((err) => res.status(500).json(err));
-
-  })
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -123,7 +122,9 @@ router.delete('/:id', (req, res) => {
       id: req.params.id,
     },
 
-  })
+  }) 
+  .then((products) => res.json(products))
+  .catch((err) => res.status(500).json(err));
 });
 
 module.exports = router;
