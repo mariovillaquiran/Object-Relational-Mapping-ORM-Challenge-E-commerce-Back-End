@@ -36,6 +36,9 @@ THEN I am able to successfully create, update, and delete data in my database
 ## Mock-Up
 
 
+https://user-images.githubusercontent.com/90975246/156431181-75fdd65a-a7e8-4b20-94c9-a419a66e833f.mp4
+
+
 # Lincense
 
 - MIT
